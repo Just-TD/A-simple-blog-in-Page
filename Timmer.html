@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container fluid pb-5 mt-5"> 
+        <div class="row "> 
+            <div class="col6 mx-auto shadow mt-5 pb-5 w-50 "> 
+                <p>
+                      <span style="font-size: 30px;" id="count3">00</span> 
+                     <span style="font-size: 30px;">:</span>  
+                     <span style="font-size: 30px;" id="count2">0</span>  
+                      <span style="font-size: 30px;">:</span> 
+                      <span style="font-size: 30px;" id="count">00</span>  
+                    
+
+                </p>
+
+                <p> 
+                    <span style="font-size: 30px;" id="val">5</span>
+                    <span style="font-size: 30px;" id="col">:</span>
+                    <span style="font-size: 30px;" id="val2">60</span>
+                </p>
+                <br><br>
+                <button id="inr_id" class="btn btn-warning">Start second_timer</button>
+                <button id="stp_id" class="btn btn-dark">Stop second_timer</button>
+
+                    <br><br> 
+                    <button id="incr" class="btn btn-danger"  >start Timer</button>
+                    <button id="stp" class="btn btn-success"  >Stop Timer</button>
+                    <button id="res" class="btn btn-dark">clear </button>
+
+            </div>
+        </div>
+      
+      
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script> 
+    var interval;
+    function code(){ 
+        var msec = count.innerHTML;
+        msec++;
+        count.innerHTML = msec;
+        
+        var sec = count2.innerHTML;
+        var min = count3.innerHTML;
+      
+        if(msec == 100){ 
+            sec++;
+            count2.innerHTML = sec;
+            count.innerHTML = "0";
+        }
+
+        if(sec == 60){ 
+            min++;
+            count3.innerHTML = min;
+            count2.innerHTML = "0";
+        }
+      
+        if(msec < 10){ 
+            count.innerHTML = "0" + msec;
+            
+        }
+
+        if(msec == 0){ 
+            var sec = count2.innerHTML;
+            sec--;
+            count2.innerHTML = sec; 
+        }
+        
+      
+    }
+
+    var incr_Btn = document.getElementById("incr");
+    var stp_Btn = document.getElementById("stp");
+    var res_Btn = document.getElementById("res");
+
+    incr_Btn.addEventListener('click',() =>{ 
+        interval = setInterval(code,10);
+        
+        
+    })
+
+    stp_Btn.addEventListener('click', ()=> { 
+        clearInterval(interval);
+    })
+
+    res_Btn.addEventListener('click', () => { 
+        clearInterval(interval);
+        sec = "00";
+        min = "00";
+        hrs = "00";
+        count.innerHTML = sec;
+        count2.innerHTML = min;
+        count3.innerHTML = hrs;
+    })
+
+    var btn_incr_id = document.getElementById("inr_id");
+    var btn_stp_id = document.getElementById("stp_id");
+
+    var interval2;
+    function code2(){ 
+        var time = val2.innerHTML;
+        time--;
+        val2.innerHTML = time;
+
+        var time2 = val.innerHTML;
+       
+
+        if(time == 0){ 
+            time2--;
+            val.innerHTML = time2;
+            time = "60";
+            val2.innerHTML = time;
+        }
+
+        if(time2 < 1){ 
+            time2 = "00";
+            val.innerHTML = time2;
+            time = "00";
+            val2.innerHTML = time;
+        }
+
+    }
+    btn_incr_id.addEventListener('click', () => { 
+        interval2 = setInterval(code2,1000);
+    })
+
+
+    
+
+
+
+  
+
+    
+
+
+
+    
+
+
+
+
+        // var seconds = "00";
+        // var tens = "00";
+        // var value = document.getElementById("count");
+        // var value2 = document.getElementById("count2");
+        // var initial;
+        // function startCount(){
+        //     tens++;
+        //     initial = setInterval(function(){ 
+        //         var counter = count.innerHTML;
+        //         counter++;
+        //         count.innerHTML = counter;
+        //         if(tens <= 9){ 
+        //             count.innerHTML =  "0" + tens;
+        //             // var counter2 = count2.innerHTML;
+        //             // counter2++;
+        //             // count2.innerHTML = counter2;
+
+        //         }
+               
+                
+                
+        //     },100)
+
+        // }
+
+        
+
+        // function stopCount(){ 
+        //     clearInterval(initial);
+        // }
+
+        // function clearCount(){ 
+        //     clearInterval(initial);
+        //     value = "00";
+        //     count.innerHTML = value;
+        //     count2.innerHTML = value;
+        // }
+        
+        
+        
+
+    
+        </script>
+</body>
+</html>
