@@ -29,16 +29,7 @@ signOut_Btn.addEventListener('click', () => {
 
 
 
-// function deposit(){ 
-//     let amount = dptAmount.value;
-//     dptAmount.value = "";
-//     let currentUsers = localStorage.getItem("currentUsers");
-//     if(currentUsers){ 
-//         let users = JSON.parse(localStorage.getItem("users"));
-//         let details = users.findIndex( u => u.email == currentUsers);
-//         let result = parseFloat(users[details].Balance) + parseFloat(amount);
-        
-//     }
+
 
 // }
 
@@ -67,6 +58,35 @@ transfer_Btn.addEventListener('click', () => {
 
 })
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function deposit(){ 
+//     let amount = dptAmount.value;
+//     dptAmount.value = "";
+//     let currentUsers = localStorage.getItem("currentUsers");
+//     if(currentUsers){ 
+//         let users = JSON.parse(localStorage.getItem("users"));
+//         let details = users.findIndex( u => u.email == currentUsers);
+//         let result = parseFloat(users[details].Balance) + parseFloat(amount);
+        
+//     }
 
 
 

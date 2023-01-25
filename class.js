@@ -307,6 +307,11 @@
 //let see = filterInput.split("").reverse().join("");
 // what is the advantage of filter over findIndex in array methods.
 // what kind of variable declaration is this --> let details;
+// What happens when you don't perform the local operations on Git can you still pull and push without it.
+// Why do we have to convert the date time to UTC string
+// Wfe 117 for deploying
+// What is the difference between Authentication with SSH and HTPPS;
+
 
 
 
